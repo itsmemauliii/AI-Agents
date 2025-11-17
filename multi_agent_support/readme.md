@@ -1,6 +1,3 @@
-Here’s a polished, professional, and clear `README.md` for your private GitHub repo. It explains the project, setup, and usage, while keeping it friendly and engaging:
-
-````markdown
 # 💬 Multi-Agent Customer Support System
 
 A **local, fully offline multi-agent AI support system** built with **LangGraph + Ollama**, wrapped in a **Streamlit chat interface**.  
