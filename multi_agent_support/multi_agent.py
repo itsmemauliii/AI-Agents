@@ -73,13 +73,11 @@ if "history" not in st.session_state:
 user_input = st.text_input("You:", "")
 
 if st.button("Send") and user_input:
-    result = app_graph.invoke({"input": user_input})
+    # Disable streaming to prevent ValueError
+    result = app_graph.invoke({"input": user_input}, stream=False)
     reply = result.get("reply", "Sorry, I couldn't process that.")
-    
-    # Save in history
+
     st.session_state.history.append({"user": user_input, "bot": reply})
-    
-    # Clear input
     st.experimental_rerun()
 
 # Display chat
